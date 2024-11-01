@@ -177,7 +177,7 @@
   /* Styl dla tekstu na zdjęciu */
   .l_overlay-text {
       position: absolute;
-      top: 150px; /* Pozycjonowanie tekstu na obrazie */
+      top: 150px; /* Pozycjonowanie tekstu na obrazie */                /*skjdhgyusdguybsduhbvgushdbguysd*/
       left: 300px;
       transform: translate(-50%, -50%);
       color: white;
@@ -414,7 +414,7 @@
 @media (max-width: 1024px) {
     /* Dostosowanie nawigacji */
     .Top_menu ul {
-        flex-direction: column; /* Przełącz menu do pionowego układu */
+
     }
     .title {
         font-size: 32px;
@@ -427,20 +427,50 @@
         flex-direction: column;
         padding: 20px;
     }
-    .left_photo, .right_photo {
-        flex-basis: 100%;
-    }
-    .l_overlay-text, .r_overlay-text {
-        font-size: 20px;
-        top: 50%; /* Środek zdjęcia */
-        left: 50%;
-    }
+   .l_overlay-text {
+       position: absolute;
+       top: 40%; /* Pozycjonowanie tekstu na obrazie */
+       left: 40%; /* Szerokość tekstu */
+       transform: translate(-50%, -50%);
+       color: white;
+       font-size: 26px;
+       text-shadow: 2px 2px 5px black;
+       opacity: 0;
+       transition: opacity 0.5s ease;
+       pointer-events: none; /* Domyślnie wyłączamy interaktywność */
+       max-width: 40%; /* Umożliwia szerszy tekst */
+       white-space: normal; /* Umożliwia łamanie wierszy */
+       max-height: 700px; /* Ustala maksymalną wysokość tekstu */
+       overflow: hidden; /* Ukrywa tekst, który wykracza poza maksymalną wysokość */
+       text-overflow: ellipsis; /* Dodaje wielokropek, gdy tekst jest zbyt długi */
+   }
+
+  .r_overlay-text {
+       position: absolute;
+            top: 40%; /* Pozycjonowanie tekstu na obrazie */
+            left: 40%; /* Szerokość tekstu */
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 26px;
+            text-shadow: 2px 2px 5px black;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none; /* Domyślnie wyłączamy interaktywność */
+            max-width: 40%; /* Umożliwia szerszy tekst */
+            white-space: normal; /* Umożliwia łamanie wierszy */
+            max-height: 700px; /* Ustala maksymalną wysokość tekstu */
+            overflow: hidden; /* Ukrywa tekst, który wykracza poza maksymalną wysokość */
+            text-overflow: ellipsis; /* Dodaje wielokropek, gdy tekst jest zbyt długi */
+   }
+
+
+
     .heading {
         font-size: 40px;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 884px) {
     /* Dostosowanie kontenera */
     .Container_zdj_1 {
         padding: 0;
@@ -469,13 +499,41 @@
         flex-basis: 100%;
     }
 
-    /* Styl tekstu na zdjęciach */
-    .l_overlay-text, .r_overlay-text {
-        font-size: 16px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
+   .l_overlay-text {
+       position: absolute;
+       top: 40%; /* Pozycjonowanie tekstu na obrazie */
+       left: 40%; /* Szerokość tekstu */
+       transform: translate(-50%, -50%);
+       color: white;
+       font-size: 30px;
+       text-shadow: 2px 2px 5px black;
+       opacity: 0;
+       transition: opacity 0.5s ease;
+       pointer-events: none; /* Domyślnie wyłączamy interaktywność */
+       max-width: 90%; /* Umożliwia szerszy tekst */
+       white-space: normal; /* Umożliwia łamanie wierszy */
+       max-height: 300px; /* Ustala maksymalną wysokość tekstu */
+       overflow: hidden; /* Ukrywa tekst, który wykracza poza maksymalną wysokość */
+       text-overflow: ellipsis; /* Dodaje wielokropek, gdy tekst jest zbyt długi */
+   }
+
+  .r_overlay-text {
+       position: absolute;
+       top: 50%; /* Pozycjonowanie tekstu na obrazie */
+       left: 40%; /* Szerokość tekstu */
+       transform: translate(-50%, -50%);
+       color: white;
+       font-size: 30px;
+       text-shadow: 2px 2px 5px black;
+       opacity: 0;
+       transition: opacity 0.5s ease;
+       pointer-events: none; /* Domyślnie wyłączamy interaktywność */
+       max-width: 90%; /* Umożliwia szerszy tekst */
+       white-space: normal; /* Umożliwia łamanie wierszy */
+       max-height: 300px; /* Ustala maksymalną wysokość tekstu */
+       overflow: hidden; /* Ukrywa tekst, który wykracza poza maksymalną wysokość */
+       text-overflow: ellipsis; /* Dodaje wielokropek, gdy tekst jest zbyt długi */
+   }
 
     /* Teksty nagłówków */
     .heading {
@@ -511,7 +569,42 @@
     .left_photo img, .right_photo img {
         height: auto;
     }
+ .l_overlay-text {
+     position: absolute;
+     top: 40%; /* Pozycjonowanie tekstu na obrazie */
+     left: 40%; /* Szerokość tekstu */
+     transform: translate(-50%, -50%);
+     color: white;
+     font-size: 14px;
+     text-shadow: 2px 2px 5px black;
+     opacity: 0;
+     transition: opacity 0.5s ease;
+     pointer-events: none; /* Domyślnie wyłączamy interaktywność */
+     max-width: 90%; /* Umożliwia szerszy tekst */
+     white-space: normal; /* Umożliwia łamanie wierszy */
+     max-height: 300px; /* Ustala maksymalną wysokość tekstu */
+     overflow: hidden; /* Ukrywa tekst, który wykracza poza maksymalną wysokość */
+     text-overflow: ellipsis; /* Dodaje wielokropek, gdy tekst jest zbyt długi */
+ }
 
+.r_overlay-text {
+     position: absolute;
+     top: 50%; /* Pozycjonowanie tekstu na obrazie */
+     left: 40%; /* Szerokość tekstu */
+     transform: translate(-50%, -50%);
+     color: white;
+     font-size: 14px;
+     text-shadow: 2px 2px 5px black;
+     opacity: 0;
+     transition: opacity 0.5s ease;
+     pointer-events: none; /* Domyślnie wyłączamy interaktywność */
+     max-width: 90%; /* Umożliwia szerszy tekst */
+     white-space: normal; /* Umożliwia łamanie wierszy */
+     max-height: 300px; /* Ustala maksymalną wysokość tekstu */
+     overflow: hidden; /* Ukrywa tekst, który wykracza poza maksymalną wysokość */
+     text-overflow: ellipsis; /* Dodaje wielokropek, gdy tekst jest zbyt długi */
+ }
+        */
     .kim_jestesmy p, .treningi p {
         font-size: 18px;
     }
