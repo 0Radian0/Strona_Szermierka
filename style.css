@@ -139,33 +139,40 @@
 
 
 /*/* Ustawienie kontenera za zdjecia */
-  .Container_zdj_1 {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: auto;
-      position: relative; /* Dodane */
-  }
+/* Kontener zdjęć */
+.Container_zdj_1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    position: relative;
+}
 
-  .right_photo, .left_photo {
-      flex-basis: 50%;
-      height: 100%;
-      overflow: visible; /*!!!!!!!!!!!*/
-      position: relative;
-  }
+/* Kontenery dla lewego i prawego zdjęcia */
+.left_photo, .right_photo {
+    flex-basis: 50%;
+    position: relative;
+    overflow: hidden; /* Ukryj elementy wychodzące poza kontener */
+}
 
-  .right_photo img, .left_photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease, filter 0.5s ease; /* Płynna animacja */
-  }
+/* Styl dla zdjęć */
+.left_photo img, .right_photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
 
-  /* Efekt hover - powiększenie i przyciemnienie zdjęcia */
-  .right_photo img:hover, .left_photo img:hover {
-      transform: scale(1.1); /* Powiększenie zdjęcia */
-      filter: brightness(70%); /* Przyciemnienie */
-  }
+/* Efekt hover - powiększenie i przyciemnienie zdjęcia */
+.left_photo:hover img, .right_photo:hover img {
+    transform: scale(1.1); /* Powiększenie zdjęcia */
+    filter: brightness(70%); /* Przyciemnienie */
+}
+
+/* Dodatkowe ograniczenie dla prawego zdjęcia */
+.right_photo img {
+    max-width: 100%; /* Utrzymuje szerokość prawego zdjęcia w ramach jego kontenera */
+}
 
   /* Styl dla tekstu na zdjęciu */
   .l_overlay-text {
@@ -400,3 +407,116 @@
     font-size: 18px;
     margin: 10px 0;
 }
+
+/* Styl responsywny */
+@media (max-width: 1024px) {
+    /* Dostosowanie nawigacji */
+    .Top_menu ul {
+        flex-direction: column; /* Przełącz menu do pionowego układu */
+    }
+    .title {
+        font-size: 32px;
+    }
+    .subtitle {
+        font-size: 16px;
+    }
+    /* Dostosowanie zdjęć */
+    .Container_zdj_1 {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .left_photo, .right_photo {
+        flex-basis: 100%;
+    }
+    .l_overlay-text, .r_overlay-text {
+        font-size: 20px;
+        top: 50%; /* Środek zdjęcia */
+        left: 50%;
+    }
+    .heading {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Dostosowanie kontenera */
+    .Container_zdj_1 {
+        padding: 0;
+    }
+
+    /* Układ mobilny dla nawigacji */
+    .Top_menu {
+        text-align: center;
+        padding: 10px 0;
+    }
+    .Top_menu ul {
+        display: none;
+    }
+
+    /* Styl dla przycisku menu */
+    .drop_menu {
+        display: block;
+    }
+
+    .drop_menu .content {
+        width: 100%;
+    }
+
+    /* Obrazki w treści */
+    .left_photo, .right_photo {
+        flex-basis: 100%;
+    }
+
+    /* Styl tekstu na zdjęciach */
+    .l_overlay-text, .r_overlay-text {
+        font-size: 16px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Teksty nagłówków */
+    .heading {
+        font-size: 30px;
+    }
+
+    /* Styl dla kontenerów treści */
+    .kim_jestesmy, .treningi, .map, .contact-section {
+        padding: 10px;
+    }
+
+    /* Mapy */
+    .map iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    /* Dostosowanie przycisków */
+    .read-more-button button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 28px;
+    }
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .left_photo img, .right_photo img {
+        height: auto;
+    }
+
+    .kim_jestesmy p, .treningi p {
+        font-size: 18px;
+    }
+
+    /* Dostosowanie sekcji kontaktu */
+    .contact-section .contact-info p {
+        font-size: 14px;
+    }
+}
+
