@@ -436,6 +436,29 @@
     .heading {
         font-size: 40px;
     }
+    .map-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .map {
+        flex: 1 1 48%; /* Ustaw mapy obok siebie */
+        height: 200px; /* Dopasuj wysokość według potrzeb */
+    }
+    .more {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .more img {
+        flex: 1 1 30%; /* Dopasuj szerokość zdjęć */
+        max-width: 100px; /* Dopasuj szerokość według potrzeb */
+    }
+
+
 }
 
 @media (max-width: 768px) {
@@ -453,10 +476,14 @@
         display: none;
     }
 
-    /* Styl dla przycisku menu */
-    .drop_menu {
-        display: block;
-    }
+
+       .drop-menu {
+           position: absolute;
+           left: 0;
+           width: 100vw;
+           top: 0;
+       }
+   }
 
     .drop_menu .content {
         width: 100%;
@@ -496,6 +523,29 @@
         padding: 8px 15px;
         font-size: 14px;
     }
+    .map-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .map {
+        flex: 1 1 48%; /* Ustaw mapy obok siebie */
+        height: 200px; /* Dopasuj wysokość według potrzeb */
+    }
+    .more {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .more img {
+        flex: 1 1 30%; /* Dopasuj szerokość zdjęć */
+        max-width: 100px; /* Dopasuj szerokość według potrzeb */
+    }
+
+
 }
 
 @media (max-width: 480px) {
@@ -518,5 +568,28 @@
     .contact-section .contact-info p {
         font-size: 14px;
     }
+    .map-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .map {
+        flex: 1 1 48%; /* Ustaw mapy obok siebie */
+        height: 200px; /* Dopasuj wysokość według potrzeb */
+    }
+    .more {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .more img {
+        flex: 1 1 30%; /* Dopasuj szerokość zdjęć */
+        max-width: 100px; /* Dopasuj szerokość według potrzeb */
+    }
+
+
 }
 
