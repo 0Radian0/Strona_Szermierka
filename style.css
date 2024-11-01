@@ -319,13 +319,16 @@
 
 .more {
     text-align: center;
-    margin: 100px 0 0 200px;
-    width: 80%;
+    margin: 0 auto; /* Wyśrodkowanie poziome */
+    width: 80%; /* Szerokość kontenera */
     height: 450px;
     display: flex;
     justify-content: center;
+    align-items: center; /* Wyśrodkowanie pionowe wewnątrz kontenera */
     gap: 20px;
+    padding-top: 100px; /* Dodaj padding, aby uzyskać efekt marginesu górnego */
 }
+
 
 .photo-container {
     position: relative;
@@ -407,7 +410,6 @@
     font-size: 18px;
     margin: 10px 0;
 }
-
 /* Styl responsywny */
 @media (max-width: 1024px) {
     /* Dostosowanie nawigacji */
@@ -436,29 +438,6 @@
     .heading {
         font-size: 40px;
     }
-    .map-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .map {
-        flex: 1 1 48%; /* Ustaw mapy obok siebie */
-        height: 200px; /* Dopasuj wysokość według potrzeb */
-    }
-    .more {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .more img {
-        flex: 1 1 30%; /* Dopasuj szerokość zdjęć */
-        max-width: 100px; /* Dopasuj szerokość według potrzeb */
-    }
-
-
 }
 
 @media (max-width: 768px) {
@@ -476,14 +455,10 @@
         display: none;
     }
 
-
-       .drop-menu {
-           position: absolute;
-           left: 0;
-           width: 100vw;
-           top: 0;
-       }
-   }
+    /* Styl dla przycisku menu */
+    .drop_menu {
+        display: block;
+    }
 
     .drop_menu .content {
         width: 100%;
@@ -523,29 +498,6 @@
         padding: 8px 15px;
         font-size: 14px;
     }
-    .map-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .map {
-        flex: 1 1 48%; /* Ustaw mapy obok siebie */
-        height: 200px; /* Dopasuj wysokość według potrzeb */
-    }
-    .more {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .more img {
-        flex: 1 1 30%; /* Dopasuj szerokość zdjęć */
-        max-width: 100px; /* Dopasuj szerokość według potrzeb */
-    }
-
-
 }
 
 @media (max-width: 480px) {
@@ -568,28 +520,7 @@
     .contact-section .contact-info p {
         font-size: 14px;
     }
-    .map-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .map {
-        flex: 1 1 48%; /* Ustaw mapy obok siebie */
-        height: 200px; /* Dopasuj wysokość według potrzeb */
-    }
-    .more {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .more img {
-        flex: 1 1 30%; /* Dopasuj szerokość zdjęć */
-        max-width: 100px; /* Dopasuj szerokość według potrzeb */
-    }
-
-
 }
+
+
 
