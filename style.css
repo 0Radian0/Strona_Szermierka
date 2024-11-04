@@ -485,12 +485,14 @@
     .heading {
         font-size: 40px;
     }
+    .read-more-button {
+            display: none;
+        }
 }
 
 @media (max-width: 884px) {
-.read-more-button {
-        top: 50%;
-        left: 50%;
+ .read-more-button {
+        display: none;
     }
 
     .title {
@@ -597,10 +599,7 @@
     }
 
     /* Dostosowanie przycisków */
-    .read-more-button button {
-        padding: 8px 15px;
-        font-size: 14px;
-    }
+
 }
 
 @media (max-width: 480px) {
@@ -679,9 +678,8 @@
     .contact-section .contact-info p {
         font-size: 14px;
     }
-.read-more-button {
-        top: 50%;
-        left: 50%;
+ .read-more-button {
+        display: none;
     }
 }
 
