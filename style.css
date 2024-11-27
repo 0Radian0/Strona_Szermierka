@@ -392,11 +392,13 @@
 .contact-section {
     background-color: #461220; /* Kolor tła */
     color: white; /* Kolor tekstu */
-    padding: 20px;
+    padding-bottom: 20px;
+
+
     text-align: center; /* Wyśrodkowanie tekstu */
     border-radius: 8px; /* Zaokrąglenie rogów */
-    margin: 20px auto;
-    max-width: 600px; /* Ograniczenie szerokości sekcji */
+    margin: auto;
+    max-width: 55%; /* Ograniczenie szerokości sekcji */
 }
 
 .contact-section h2 {
@@ -488,6 +490,14 @@
     .read-more-button {
             display: none;
         }
+        .contact-section {
+
+
+                       text-align: center; /* Wyśrodkowanie tekstu */
+                       border-radius: 8px; /* Zaokrąglenie rogów */
+
+                       max-width: 100%; /* Ograniczenie szerokości sekcji */
+                   }
 }
 
 @media (max-width: 884px) {
@@ -587,13 +597,36 @@
     /* Styl dla kontenerów treści */
 
 
-    /* Mapy */
-    .map iframe {
-        width: 100%;
-        height: 300px;
+    #map iframe {
+        width: 45%;
+        max-height: 300px;
     }
 
-    /* Dostosowanie przycisków */
+    #map h2 {
+           font-size: 36px; /* Zmień na dowolny rozmiar */
+           font-weight: bold; /* Opcjonalne: wzmocnij tekst */
+           text-align: center; /* Opcjonalne: wyrównaj do środka */
+
+           margin-bottom: 15px; /* Dostosuj odstęp od elementów poniżej */
+       }
+       #map p {
+       font-size: 24px; /* Zmień na dowolny rozmiar */
+
+               text-align: center; /* Opcjonalne: wyrównaj do środka */
+
+               margin-bottom: 15px; /* Dostosuj odstęp od elementów poniżej */
+       }
+
+
+           .contact-section {
+
+
+               text-align: center; /* Wyśrodkowanie tekstu */
+               border-radius: 8px; /* Zaokrąglenie rogów */
+
+               max-width: 100%; /* Ograniczenie szerokości sekcji */
+           }
+
 
 }
 
@@ -676,6 +709,33 @@
  .read-more-button {
         display: none;
     }
+
+    #map h2 {
+        font-size: 36px; /* Zmień na dowolny rozmiar */
+        font-weight: bold; /* Opcjonalne: wzmocnij tekst */
+        text-align: center; /* Opcjonalne: wyrównaj do środka */
+
+        margin-bottom: 15px; /* Dostosuj odstęp od elementów poniżej */
+    }
+    #map p {
+    font-size: 16px; /* Zmień na dowolny rozmiar */
+
+            text-align: center; /* Opcjonalne: wyrównaj do środka */
+
+            margin-bottom: 15px; /* Dostosuj odstęp od elementów poniżej */
+    }
+    #map iframe {
+        width: 45%;
+    }
+        .contact-section {
+
+
+            text-align: center; /* Wyśrodkowanie tekstu */
+            border-radius: 8px; /* Zaokrąglenie rogów */
+
+            max-width: 100%; /* Ograniczenie szerokości sekcji */
+        }
+
 }
 
 
